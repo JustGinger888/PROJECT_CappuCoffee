@@ -1,7 +1,13 @@
 <template>
   <div id="app">
     <Navigation :user="user" @logout="logout" />
-    <router-view class="container" :user="user" />
+    <router-view
+      class="container"
+      :user="user"
+      :groups="groups"
+      @addGroup="addGroup"
+      @deletegroup="deletegroup"
+    />
   </div>
 </template>
 
@@ -18,7 +24,8 @@ export default {
   name: "app",
   data() {
     return {
-      user: null
+      user: null,
+      groups: []
     };
   },
   methods: {
@@ -32,12 +39,48 @@ export default {
         .catch(err => {
           console.error(err);
         });
+    },
+    addGroup(payload) {
+      db.collection("users")
+        .doc(this.user.uid)
+        .collection("groups")
+        .add({
+          name: payload,
+          createAt: Firebase.firestore.FieldValue.serverTimestamp()
+        });
+
+      db.collection("groups").add({
+        name: payload,
+        createAt: Firebase.firestore.FieldValue.serverTimestamp()
+      });
+    },
+    deletegroup(payload) {
+      db.collection("users")
+        .doc(this.user.uid)
+        .collection("groups")
+        .doc(payload)
+        .delete();
     }
   },
   mounted() {
     Firebase.auth().onAuthStateChanged(user => {
       if (user) {
-        this.user = user.displayName;
+        this.user = user;
+
+        db.collection("users")
+          .doc(this.user.uid)
+          .collection("groups")
+          .orderBy("name")
+          .onSnapshot(snapshot => {
+            const snapData = [];
+            snapshot.forEach(doc => {
+              snapData.push({
+                id: doc.id,
+                name: doc.data().name
+              });
+            });
+            this.groups = snapData;
+          });
       }
     });
   },

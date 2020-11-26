@@ -79,6 +79,7 @@
 
 <script>
 import Firebase from "firebase";
+import db from "../db.js";
 export default {
   data() {
     return {
@@ -101,11 +102,25 @@ export default {
         Firebase.auth()
           .createUserWithEmailAndPassword(details.email, details.password)
           .then(userCredentials => {
-            return userCredentials.user
-              .updateProfile({
-                displayName: details.displayName
+            userCredentials.user.updateProfile({
+              displayName: details.displayName
+            });
+
+            return db
+              .collection("users")
+              .doc(userCredentials.user.uid)
+              .set({
+                displayName: details.displayName,
+                email: details.email
               })
-              .then(this.$router.push("groups"));
+              .catch(err => {
+                this.error = err.message;
+                console.error(err);
+              });
+          })
+          .then(() => {
+            this.$router.push("groups");
+            this.$router.go(0);
           })
           .catch(err => {
             this.error = err.message;
