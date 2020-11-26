@@ -100,9 +100,12 @@ export default {
       if (!this.error) {
         Firebase.auth()
           .createUserWithEmailAndPassword(details.email, details.password)
-          // eslint-disable-next-line no-unused-vars
           .then(userCredentials => {
-            this.$router.push("groups");
+            return userCredentials.user
+              .updateProfile({
+                displayName: details.displayName
+              })
+              .then(this.$router.push("groups"));
           })
           .catch(err => {
             this.error = err.message;

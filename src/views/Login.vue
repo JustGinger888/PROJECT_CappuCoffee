@@ -1,6 +1,6 @@
 <template>
   <div>
-    <form class="mt-3" @submit.prevent="login">
+    <form class="mt-3" v-on:submit.prevent="login">
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-lg-6">
