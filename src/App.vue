@@ -11,7 +11,9 @@ import Navigation from "@/components/Navigation.vue";
 
 // Firebase Imports
 import Firebase from "firebase";
-//import db from "./db.js";
+// eslint-disable-next-line no-unused-vars
+import db from "./db.js";
+
 export default {
   name: "app",
   data() {

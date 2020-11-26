@@ -1,0 +1,88 @@
+[debug] [2020-11-26T16:42:00.459Z] ----------------------------------------------------------------------
+[debug] [2020-11-26T16:42:00.462Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\ethan\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2020-11-26T16:42:00.462Z] CLI Version:   8.16.2
+[debug] [2020-11-26T16:42:00.462Z] Platform:      win32
+[debug] [2020-11-26T16:42:00.463Z] Node Version:  v14.3.0
+[debug] [2020-11-26T16:42:00.464Z] Time:          Thu Nov 26 2020 16:42:00 GMT+0000 (Greenwich Mean Time)
+[debug] [2020-11-26T16:42:00.464Z] ----------------------------------------------------------------------
+[debug] [2020-11-26T16:42:00.464Z] 
+[debug] [2020-11-26T16:42:00.475Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-11-26T16:42:00.476Z] > authorizing via signed-in user
+[debug] [2020-11-26T16:42:00.476Z] [iam] checking project cappucoffee-40101 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2020-11-26T16:42:00.480Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/cappucoffee-40101:testIamPermissions  
+ {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2020-11-26T16:42:01.103Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Thu, 26 Nov 2020 16:42:04 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=539","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-11-26T16:42:01.106Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/cappucoffee-40101  
+ 
+[debug] [2020-11-26T16:42:01.255Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Thu, 26 Nov 2020 16:42:04 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] 
+[info] === Deploying to 'cappucoffee-40101'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2020-11-26T16:42:01.262Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/cappucoffee-40101/versions  
+ {"config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2020-11-26T16:42:02.400Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Thu, 26 Nov 2020 16:42:05 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] i  hosting[cappucoffee-40101]: beginning deploy... 
+[debug] [2020-11-26T16:42:02.529Z] Error: EPERM: operation not permitted, scandir 'C:/Users/ethan/Documents/BSc_Y2/PROJECT_CappuCoffee/firebase-debug.log'
+    at Object.readdirSync (fs.js:974:3)
+    at GlobSync._readdir (C:\Users\ethan\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:288:41)
+    at GlobSync._readdirInGlobStar (C:\Users\ethan\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:245:17)
+    at GlobSync._readdir (C:\Users\ethan\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:276:17)
+    at GlobSync._processReaddir (C:\Users\ethan\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:137:22)
+    at GlobSync._process (C:\Users\ethan\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:132:10)
+    at GlobSync._processGlobStar (C:\Users\ethan\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:380:10)
+    at GlobSync._process (C:\Users\ethan\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:130:10)
+    at new GlobSync (C:\Users\ethan\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:48:10)
+    at Function.globSync [as sync] (C:\Users\ethan\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:26:10)
+    at listFiles (C:\Users\ethan\AppData\Roaming\npm\node_modules\firebase-tools\lib\listFiles.js:6:19)
+    at _runDeploys (C:\Users\ethan\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\hosting\deploy.js:30:23)
+    at module.exports (C:\Users\ethan\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\hosting\deploy.js:66:12)
+    at _chain (C:\Users\ethan\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\index.js:23:40)
+    at C:\Users\ethan\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\index.js:67:16
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2020-11-26T16:42:11.340Z] ----------------------------------------------------------------------
+[debug] [2020-11-26T16:42:11.343Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\ethan\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2020-11-26T16:42:11.343Z] CLI Version:   8.16.2
+[debug] [2020-11-26T16:42:11.343Z] Platform:      win32
+[debug] [2020-11-26T16:42:11.344Z] Node Version:  v14.3.0
+[debug] [2020-11-26T16:42:11.345Z] Time:          Thu Nov 26 2020 16:42:11 GMT+0000 (Greenwich Mean Time)
+[debug] [2020-11-26T16:42:11.345Z] ----------------------------------------------------------------------
+[debug] [2020-11-26T16:42:11.345Z] 
+[debug] [2020-11-26T16:42:11.354Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-11-26T16:42:11.354Z] > authorizing via signed-in user
+[debug] [2020-11-26T16:42:11.355Z] [iam] checking project cappucoffee-40101 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2020-11-26T16:42:11.358Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/cappucoffee-40101:testIamPermissions  
+ {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2020-11-26T16:42:11.960Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Thu, 26 Nov 2020 16:42:15 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=545","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-11-26T16:42:11.962Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/cappucoffee-40101  
+ 
+[debug] [2020-11-26T16:42:12.115Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Thu, 26 Nov 2020 16:42:15 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] 
+[info] === Deploying to 'cappucoffee-40101'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2020-11-26T16:42:12.121Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/cappucoffee-40101/versions  
+ {"config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2020-11-26T16:42:13.215Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Thu, 26 Nov 2020 16:42:16 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] i  hosting[cappucoffee-40101]: beginning deploy... 
+[debug] [2020-11-26T16:42:13.317Z] Error: EPERM: operation not permitted, scandir 'C:/Users/ethan/Documents/BSc_Y2/PROJECT_CappuCoffee/firebase-debug.log'
+    at Object.readdirSync (fs.js:974:3)
+    at GlobSync._readdir (C:\Users\ethan\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:288:41)
+    at GlobSync._readdirInGlobStar (C:\Users\ethan\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:245:17)
+    at GlobSync._readdir (C:\Users\ethan\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:276:17)
+    at GlobSync._processReaddir (C:\Users\ethan\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:137:22)
+    at GlobSync._process (C:\Users\ethan\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:132:10)
+    at GlobSync._processGlobStar (C:\Users\ethan\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:380:10)
+    at GlobSync._process (C:\Users\ethan\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:130:10)
+    at new GlobSync (C:\Users\ethan\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:48:10)
+    at Function.globSync [as sync] (C:\Users\ethan\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:26:10)
+    at listFiles (C:\Users\ethan\AppData\Roaming\npm\node_modules\firebase-tools\lib\listFiles.js:6:19)
+    at _runDeploys (C:\Users\ethan\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\hosting\deploy.js:30:23)
+    at module.exports (C:\Users\ethan\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\hosting\deploy.js:66:12)
+    at _chain (C:\Users\ethan\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\index.js:23:40)
+    at C:\Users\ethan\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\index.js:67:16
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+[error] 
+[error] Error: An unexpected error has occurred.

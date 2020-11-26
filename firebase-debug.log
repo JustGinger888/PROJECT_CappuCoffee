@@ -1,0 +1,54 @@
+[debug] [2020-11-26T17:09:21.769Z] ----------------------------------------------------------------------
+[debug] [2020-11-26T17:09:21.770Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\ethan\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve
+[debug] [2020-11-26T17:09:21.771Z] CLI Version:   8.16.2
+[debug] [2020-11-26T17:09:21.771Z] Platform:      win32
+[debug] [2020-11-26T17:09:21.771Z] Node Version:  v14.3.0
+[debug] [2020-11-26T17:09:21.772Z] Time:          Thu Nov 26 2020 17:09:21 GMT+0000 (Greenwich Mean Time)
+[debug] [2020-11-26T17:09:21.772Z] ----------------------------------------------------------------------
+[debug] [2020-11-26T17:09:21.772Z] 
+[debug] [2020-11-26T17:09:21.778Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-11-26T17:09:21.778Z] > authorizing via signed-in user
+[debug] [2020-11-26T17:09:21.778Z] [iam] checking project cappucoffee-40101 for permissions ["firebase.projects.get"]
+[debug] [2020-11-26T17:09:21.781Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/cappucoffee-40101:testIamPermissions  
+ {"permissions":["firebase.projects.get"]}
+[debug] [2020-11-26T17:09:22.393Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Thu, 26 Nov 2020 17:09:25 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=541","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-11-26T17:09:22.396Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/cappucoffee-40101  
+ 
+[debug] [2020-11-26T17:09:22.603Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Thu, 26 Nov 2020 17:09:26 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] 
+[info] === Serving from 'C:\Users\ethan\Documents\BSc_Y2\PROJECT_CappuCoffee'...
+[info] 
+[debug] [2020-11-26T17:09:22.610Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/cappucoffee-40101/webApps/-/config  
+ 
+[debug] [2020-11-26T17:09:23.283Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Thu, 26 Nov 2020 17:09:26 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] i  hosting: Serving hosting files from: dist {"metadata":{"emulator":{"name":"hosting"},"message":"Serving hosting files from: \u001b[1mdist\u001b[22m"}}
+[info] +  hosting: Local server: http://localhost:5000 {"metadata":{"emulator":{"name":"hosting"},"message":"Local server: \u001b[4m\u001b[1mhttp://localhost:5000\u001b[22m\u001b[24m"}}
+[info] i  hosting: 127.0.0.1 - - [26/Nov/2020:17:09:25 +0000] "GET / HTTP/1.1" 200 770 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [26/Nov/2020:17:09:25 +0000] \"GET / HTTP/1.1\" 200 770 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36\""}}
+[info] i  hosting: 127.0.0.1 - - [26/Nov/2020:17:09:25 +0000] "GET /css/app.eed78622.css HTTP/1.1" 200 144871 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [26/Nov/2020:17:09:25 +0000] \"GET /css/app.eed78622.css HTTP/1.1\" 200 144871 \"http://localhost:5000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36\""}}
+[info] i  hosting: 127.0.0.1 - - [26/Nov/2020:17:09:25 +0000] "GET /js/app.ad93ba59.js HTTP/1.1" 200 10454 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [26/Nov/2020:17:09:25 +0000] \"GET /js/app.ad93ba59.js HTTP/1.1\" 200 10454 \"http://localhost:5000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36\""}}
+[info] i  hosting: 127.0.0.1 - - [26/Nov/2020:17:09:25 +0000] "GET /js/chunk-vendors.bfdcc98a.js HTTP/1.1" 200 1110599 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [26/Nov/2020:17:09:25 +0000] \"GET /js/chunk-vendors.bfdcc98a.js HTTP/1.1\" 200 1110599 \"http://localhost:5000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36\""}}
+[debug] [2020-11-26T17:16:38.703Z] ----------------------------------------------------------------------
+[debug] [2020-11-26T17:16:38.704Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\ethan\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2020-11-26T17:16:38.705Z] CLI Version:   8.16.2
+[debug] [2020-11-26T17:16:38.705Z] Platform:      win32
+[debug] [2020-11-26T17:16:38.705Z] Node Version:  v14.3.0
+[debug] [2020-11-26T17:16:38.706Z] Time:          Thu Nov 26 2020 17:16:38 GMT+0000 (Greenwich Mean Time)
+[debug] [2020-11-26T17:16:38.706Z] ----------------------------------------------------------------------
+[debug] [2020-11-26T17:16:38.706Z] 
+[debug] [2020-11-26T17:16:38.711Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-11-26T17:16:38.711Z] > authorizing via signed-in user
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\ethan\Documents\BSc_Y2\PROJECT_CappuCoffee
+
+Before we get started, keep in mind:
+
+  * You are initializing in an existing Firebase project directory
+
