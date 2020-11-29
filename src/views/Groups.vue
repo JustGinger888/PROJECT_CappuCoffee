@@ -70,7 +70,7 @@
                 <router-link
                   class="btn btn-sm btn-outline-secondary"
                   title="Members"
-                  to="/"
+                  :to="'/members/' + user.uid + '/' + item.id"
                 >
                   <font-awesome-icon icon="list-ul"></font-awesome-icon>
                 </router-link>
