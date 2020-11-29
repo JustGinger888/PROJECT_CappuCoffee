@@ -49,11 +49,11 @@
               <section
                 class="btn-group align-self-center"
                 role="group"
-                aria-label="Meeting Options"
+                aria-label="Group Options"
               >
                 <button
                   class="btn btn-sm btn-outline-secondary"
-                  title="Delete Meeting"
+                  title="Delete Group"
                   v-on:click="$emit('deletegroup', item.id)"
                 >
                   <font-awesome-icon icon="trash"></font-awesome-icon>
@@ -61,8 +61,8 @@
 
                 <router-link
                   class="btn btn-sm btn-outline-secondary"
-                  title="Check In"
-                  to="/"
+                  title="Chat"
+                  :to="'/chat/' + user.uid + '/' + item.id"
                 >
                   <font-awesome-icon icon="link"></font-awesome-icon>
                 </router-link>

@@ -5,8 +5,10 @@
       class="container"
       :user="user"
       :groups="groups"
+      :error="error"
       @addGroup="addGroup"
       @deletegroup="deletegroup"
+      @checkIn="checkIn"
     />
   </div>
 </template>
@@ -25,6 +27,7 @@ export default {
   data() {
     return {
       user: null,
+      error: null,
       groups: []
     };
   },
@@ -60,6 +63,30 @@ export default {
         .collection("groups")
         .doc(payload)
         .delete();
+    },
+    checkIn(payload) {
+      db.collection("users")
+        .doc(payload.userID)
+        .collection("groups")
+        .doc(payload.chatID)
+        .get()
+        .then(doc => {
+          if (doc.exists) {
+            db.collection("users")
+              .doc(payload.userID)
+              .collection("groups")
+              .doc(payload.chatID)
+              .collection("members")
+              .add({
+                displayName: payload.displayName,
+                email: payload.email,
+                createAt: Firebase.firestore.FieldValue.serverTimestamp()
+              })
+              .then(() => this.$router.push("/"));
+          } else {
+            this.error = "sorry no such meeting";
+          }
+        });
     }
   },
   mounted() {

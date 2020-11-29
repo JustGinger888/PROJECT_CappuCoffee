@@ -5,6 +5,7 @@ import Home from "../views/Home.vue";
 import Login from "../views/Login.vue";
 import Register from "../views/Register.vue";
 import Groups from "../views/Groups.vue";
+import Chat from "../views/Chat.vue";
 
 Vue.use(VueRouter);
 
@@ -28,6 +29,11 @@ const routes = [
     path: "/groups",
     name: "groups",
     component: Groups
+  },
+  {
+    path: "/chat/:userID/:chatID",
+    name: "Chat",
+    component: Chat
   },
   {
     path: "/*",
